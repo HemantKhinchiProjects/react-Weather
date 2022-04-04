@@ -22,6 +22,7 @@ const Card = (props) => {
   return (
     <div className="card text-center" style={{ width: '18rem' }}>
       <input
+        value={search}
         type="search"
         className="form-control"
         placeholder="Username"
@@ -52,7 +53,7 @@ const Card = (props) => {
           </div>
           <div className="card-body align-center">
             <p className="card-text">
-              Min {city.temp_min} Cel | Max: {city.temp_max} Cel
+              Min : {city.temp_min} Cel | Max: {city.temp_max} Cel
             </p>
           </div>
         </div>
