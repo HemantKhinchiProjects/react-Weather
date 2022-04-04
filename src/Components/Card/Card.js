@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import Input from '../Inputs/Input';
 const Card = (props) => {
   const [location, setLocation] = useState(null);
+  const getLocationHandler = (e) => {
+    e.preventDefault();
+    console.log('this is:', this);
+  };
   return (
     <div className="card" style={{ width: '18rem' }}>
-      <Input onClick={getLocation} />
+      <Input onClick={getLocationHandler} />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={60}
