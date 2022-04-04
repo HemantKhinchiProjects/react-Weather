@@ -5,7 +5,7 @@ const Card = (props) => {
   const [search, setSearch] = useState('Ahmedabad');
   useEffect(() => {
     const featchApi = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=e7fc42d81dcab94ec1e0c74f098b1566`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=e7fc42d81dcab94ec1e0c74f098b1566`;
       const response = await fetch(url);
       const resJson = await response.json();
       setCity(resJson.main);
