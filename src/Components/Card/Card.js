@@ -17,7 +17,7 @@ const Card = (props) => {
     e.preventDefault();
     //console.log('this is:', this);
 
-    //setCity(e.target.location);
+    setSearch(e.target.value);
   };
   return (
     <div className="card text-center" style={{ width: '18rem' }}>
@@ -36,7 +36,7 @@ const Card = (props) => {
           >
             <path d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 110-6 3 3 0 010 6z" />
           </svg>
-          Current {city.name}
+          Current {search}
         </h5>
         <a href="#" className="btn btn-primary my-3">
           5.25 Cel
