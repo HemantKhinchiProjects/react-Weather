@@ -3,7 +3,7 @@ import React from 'react';
 const Input = () => (
   <div className="input-group flex-nowrap">
     <input
-      type="text"
+      type="search"
       className="form-control"
       placeholder="Username"
       aria-label="Username"

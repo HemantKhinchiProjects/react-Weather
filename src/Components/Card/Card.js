@@ -5,13 +5,12 @@ const Card = (props) => {
   const getLocationHandler = (e) => {
     e.preventDefault();
     console.log('this is:', this);
-    setLocation(
-      location
-    )
+
+    setLocation(e.target.location);
   };
   return (
     <div className="card" style={{ width: '18rem' }}>
-      <Input onClick={getLocationHandler} />
+      <Input onChange={getLocationHandler} />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={60}
