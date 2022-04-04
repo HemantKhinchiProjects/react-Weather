@@ -48,10 +48,12 @@ const Card = (props) => {
             Current {search}
           </h5>
           <div href="#" className="btn btn-primary my-3">
-            {city.temp}
+            {city.temp}.Cel
           </div>
           <div className="card-body align-center">
-            <p className="card-text">Min 5.25 Cel | Max: 6.35. Cel</p>
+            <p className="card-text">
+              Min {city.temp_min} Cel | Max: {city.temp_max} Cel
+            </p>
           </div>
         </div>
       )}
