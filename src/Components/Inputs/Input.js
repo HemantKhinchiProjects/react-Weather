@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Input = () => (
+const Input = () => (
   <div className="input-group flex-nowrap">
     <input
       type="text"
@@ -11,3 +11,4 @@ export const Input = () => (
     />
   </div>
 );
+export default Input;
