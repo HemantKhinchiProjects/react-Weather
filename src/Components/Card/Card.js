@@ -5,6 +5,9 @@ const Card = (props) => {
   const getLocationHandler = (e) => {
     e.preventDefault();
     console.log('this is:', this);
+    setLocation(
+      location
+    )
   };
   return (
     <div className="card" style={{ width: '18rem' }}>
