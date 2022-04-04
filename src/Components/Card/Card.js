@@ -25,7 +25,6 @@ const Card = (props) => {
 
       <div className="card-body align-center">
         <h5 className="card-title">
-          {' '}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={60}
@@ -37,7 +36,7 @@ const Card = (props) => {
           >
             <path d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 110-6 3 3 0 010 6z" />
           </svg>
-          Current location
+          Current {city}
           {location}
         </h5>
         <a href="#" className="btn btn-primary my-3">
