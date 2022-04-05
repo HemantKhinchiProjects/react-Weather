@@ -20,15 +20,17 @@ const Card = (props) => {
   };
   return (
     <div className="card text-center">
-      <input
-        value={search}
-        type="search"
-        className="form-control"
-        placeholder="Username"
-        aria-label="Username"
-        aria-describedby="addon-wrapping"
-        onChange={getLocationHandler}
-      />
+      <div className="form-control">
+        <input
+          value={search}
+          type="search"
+          className="form-control"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          onChange={getLocationHandler}
+        />
+      </div>
       {!city ? (
         <p>No deta Found</p>
       ) : (
@@ -45,9 +47,11 @@ const Card = (props) => {
             >
               <path d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 110-6 3 3 0 010 6z" />
             </svg>
-            Current {search}
+            {search} : City Weather
           </h5>
-          <div className="alert alert-primary my-3">{city.temp}.Cel</div>
+          <div className="alert alert-primary my-3">
+            <h1>{city.temp}°C</h1>
+          </div>
           <div className="card-body align-center">
             <p className="card-text">
               Min : {city.temp_min} Cel | Max: {city.temp_max} Cel
