@@ -47,7 +47,7 @@ const Card = (props) => {
             </svg>
             Current {search}
           </h5>
-          <div href="#" className="btn btn-primary my-3">
+          <div className="btn btn-primary my-3">
             {city.temp}.Cel
           </div>
           <div className="card-body align-center">
