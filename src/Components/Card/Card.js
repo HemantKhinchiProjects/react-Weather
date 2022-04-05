@@ -15,12 +15,11 @@ const Card = (props) => {
 
   const getLocationHandler = (e) => {
     e.preventDefault();
-    //console.log('this is:', this);
 
     setSearch(e.target.value);
   };
   return (
-    <div className="card text-center" style={{ width: '18rem' }}>
+    <div className="card text-center">
       <input
         value={search}
         type="search"
