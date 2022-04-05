@@ -47,9 +47,7 @@ const Card = (props) => {
             </svg>
             Current {search}
           </h5>
-          <div className="btn btn-primary my-3">
-            {city.temp}.Cel
-          </div>
+          <div className="alert alert-primary my-3">{city.temp}.Cel</div>
           <div className="card-body align-center">
             <p className="card-text">
               Min : {city.temp_min} Cel | Max: {city.temp_max} Cel
