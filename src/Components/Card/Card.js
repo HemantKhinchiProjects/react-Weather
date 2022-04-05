@@ -19,8 +19,8 @@ const Card = (props) => {
     setSearch(e.target.value);
   };
   return (
-    <div className="card text-center">
-      <div className="form-control">
+    <div className="card text-center col-md-2 m-auto">
+      <div className="form-control my-3">
         <input
           value={search}
           type="search"
