@@ -10,7 +10,7 @@ const Card = (props) => {
   const [dis, setDis] = useState(null);
   const [Weather, SetWeather] = useState(null);
   let weatherImage = <ClearSkySvg />;
-  const [search, setSearch] = useState('Sirte');
+  const [search, setSearch] = useState('Ahmedabad');
   useEffect(() => {
     const featchApi = async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2d27aad48daac2645f19d5db24e9516d`;
@@ -29,7 +29,6 @@ const Card = (props) => {
   };
 
   if (dis === 'few clouds') {
-    console.log('few clouds');
     weatherImage = <OvercastClouds />;
   } else if (dis === 'scattered clouds') {
     weatherImage = <OvercastClouds />;
@@ -44,11 +43,10 @@ const Card = (props) => {
   } else if (dis === 'clear sky') {
     weatherImage = <ClearSkySvg />;
   } else {
-    console.log('none');
   }
   return (
-    <div className="card text-center col-md-2 m-auto">
-      <div className="form-control my-3">
+    <div className="card text-center col-md-4 m-auto p-3 mt-5">
+      <div className="my-4">
         <input
           value={search}
           type="search"
@@ -77,12 +75,13 @@ const Card = (props) => {
             </svg>
             {search} : City Weather
           </h5>
-          <div className="alert alert-primary my-3">
-            <h1>{city.temp}°C</h1>
-          </div>
+
           <div className="card-body align-center">
             <div className="weather-container">{weatherImage}</div>
             <p className="card-text">Weather : {dis}</p>
+            <div className="alert alert-primary my-3">
+              <h1>{city.temp}°C</h1>
+            </div>
             <p className="card-text">
               Min :{dis} {city.temp_min} Cel | Max: {city.temp_max} Cel
             </p>
