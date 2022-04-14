@@ -10,7 +10,7 @@ const Card = (props) => {
   const [dis, setDis] = useState(null);
   const [Weather, SetWeather] = useState(null);
   let weatherImage = <ClearSkySvg />;
-  const [search, setSearch] = useState('london');
+  const [search, setSearch] = useState('Sirte');
   useEffect(() => {
     const featchApi = async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2d27aad48daac2645f19d5db24e9516d`;
@@ -34,11 +34,13 @@ const Card = (props) => {
   } else if (dis === 'scattered clouds') {
     weatherImage = <OvercastClouds />;
   } else if (dis === 'overcast clouds') {
-    weatherImage = <OvercastClouds />;
+    weatherImage = <WindySvg />;
   } else if (dis === 'haze') {
     weatherImage = <FogSvg />;
   } else if (dis === 'broken clouds') {
     weatherImage = <OvercastClouds />;
+  } else if (dis === 'light rain') {
+    weatherImage = <HurricaneSvg />;
   } else if (dis === 'clear sky') {
     weatherImage = <ClearSkySvg />;
   } else {
