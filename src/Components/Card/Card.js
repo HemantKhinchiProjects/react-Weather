@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Input from '../Inputs/Input';
 const Card = (props) => {
   const [city, setCity] = useState(null);
+  const [dis, setDis] = useState(null);
   const [search, setSearch] = useState('Ahmedabad');
   useEffect(() => {
     const featchApi = async () => {
@@ -9,6 +10,8 @@ const Card = (props) => {
       const response = await fetch(url);
       const resJson = await response.json();
       setCity(resJson.main);
+      setDis(resJson.weather[0].description);
+      const dis = resJson.weather[0].description;
     };
     featchApi();
   }, [search]);
@@ -54,7 +57,7 @@ const Card = (props) => {
           </div>
           <div className="card-body align-center">
             <p className="card-text">
-              Min : {city.temp_min} Cel | Max: {city.temp_max} Cel
+              Min :{dis} {city.temp_min} Cel | Max: {city.temp_max} Cel
             </p>
           </div>
         </div>
