@@ -45,7 +45,7 @@ const Card = (props) => {
   } else {
   }
   return (
-    <div className="card text-center col-md-4 m-auto p-3 mt-5">
+    <div className="bg-warning card text-center col-md-4 m-auto p-3 mt-5">
       <div className="my-4">
         <input
           value={search}
@@ -60,7 +60,7 @@ const Card = (props) => {
       {!city ? (
         <p>No deta Found</p>
       ) : (
-        <div>
+        <div className="bg-light p-4">
           <h5 className="card-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
