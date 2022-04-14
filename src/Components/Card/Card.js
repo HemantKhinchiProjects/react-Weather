@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Input from '../Inputs/Input';
 import HurricaneSvg from '../UI/HurricaneSvg';
+import ClearSkySvg from '../UI/clearSkySvg';
+import WindySvg from '../UI/WindySvg';
+import OvercastClouds from '../UI/OvercastClouds';
+import FogSvg from '../UI/FogSvg';
 const Card = (props) => {
   const [city, setCity] = useState(null);
   const [dis, setDis] = useState(null);
-  let weatherImage = <HurricaneSvg />;
+  const [Weather, SetWeather] = useState(null);
+  let weatherImage = <ClearSkySvg />;
   const [search, setSearch] = useState('london');
   useEffect(() => {
     const featchApi = async () => {
@@ -22,6 +27,7 @@ const Card = (props) => {
     e.preventDefault();
     setSearch(e.target.value);
   };
+
   if (dis === 'few clouds') {
     console.log('few clouds');
   } else if (dis === 'scattered clouds') {
@@ -72,15 +78,12 @@ const Card = (props) => {
             <h1>{city.temp}°C</h1>
           </div>
           <div className="card-body align-center">
-            <p className="card-text">
-              Min :{dis}
-              {weatherImage}
-            </p>
+            <div className="weather-container">{weatherImage}</div>
+            <p className="card-text">Weather : {dis}</p>
             <p className="card-text">
               Min :{dis} {city.temp_min} Cel | Max: {city.temp_max} Cel
             </p>
           </div>
-          <div className="weather-container"></div>
         </div>
       )}
     </div>
