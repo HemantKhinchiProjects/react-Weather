@@ -60,7 +60,7 @@ const Card = (props) => {
       {!city ? (
         <p>No deta Found</p>
       ) : (
-        <div className="bg-light p-4">
+        <div className="bg-light p-4 rounded-2">
           <h5 className="card-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
