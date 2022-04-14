@@ -79,6 +79,39 @@ c0.1,0,0.2-0.4,0.2-1.1C-377.4,283.5-381.3,279.6-386,279.6z"
       </div>
     );
   } else if (dis === 'smoke') {
+    console.log('smoke');
+    return (
+      <div className="svg-contain">
+        <svg
+          version="1.1"
+          className="clear-sky-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 72.3 52.6"
+          style={{ enableBackground: 'new 0 0 72.3 52.6' }}
+          xmlSpace="preserve"
+        >
+          <g>
+            <path
+              className="sun"
+              d="M50.8,25.7c0,7.9-6.4,14.4-14.4,14.4s-14.4-6.4-14.4-14.4s6.4-14.4,14.4-14.4S50.8,17.8,50.8,25.7z"
+            />
+            <path className="line big-path line-1" d="M54.5,25.8h6" />
+            <path className="line big-path line-2" d="M12.4,25.8h6" />
+            <path className="line big-path line-3" d="M36.5,44.3v6" />
+            <path className="line big-path line-4" d="M36.5,8.2v-6" />
+            <path className="line big-path line-5" d="M23,38.8l-4.8,4.8" />
+            <path className="line big-path line-6" d="M54.9,8.9L50,13.8" />
+            <path className="line big-path line-7" d="M50,38.8l4.4,4.4" />
+            <path className="line big-path line-8" d="M18.8,9.6l4.2,4.2" />
+          </g>
+        </svg>
+      </div>
+    );
+  } else if (dis === 'smoke') {
+    console.log('smoke');
     return (
       <div className="svg-contain">
         <svg
@@ -182,34 +215,6 @@ c0.1,0,0.2-0.4,0.2-1.1C-377.4,283.5-381.3,279.6-386,279.6z"
         </div>
       )}
       <div className="weather-container">
-        <div className="svg-contain">
-          <svg
-            version="1.1"
-            className="clear-sky-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 72.3 52.6"
-            style={{ enableBackground: 'new 0 0 72.3 52.6' }}
-            xmlSpace="preserve"
-          >
-            <g>
-              <path
-                className="sun"
-                d="M50.8,25.7c0,7.9-6.4,14.4-14.4,14.4s-14.4-6.4-14.4-14.4s6.4-14.4,14.4-14.4S50.8,17.8,50.8,25.7z"
-              />
-              <path className="line big-path line-1" d="M54.5,25.8h6" />
-              <path className="line big-path line-2" d="M12.4,25.8h6" />
-              <path className="line big-path line-3" d="M36.5,44.3v6" />
-              <path className="line big-path line-4" d="M36.5,8.2v-6" />
-              <path className="line big-path line-5" d="M23,38.8l-4.8,4.8" />
-              <path className="line big-path line-6" d="M54.9,8.9L50,13.8" />
-              <path className="line big-path line-7" d="M50,38.8l4.4,4.4" />
-              <path className="line big-path line-8" d="M18.8,9.6l4.2,4.2" />
-            </g>
-          </svg>
-        </div>
         <div className="svg-contain">
           <svg
             version="1.1"
