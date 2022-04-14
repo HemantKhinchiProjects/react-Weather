@@ -8,7 +8,7 @@ import FogSvg from '../UI/FogSvg';
 const Card = (props) => {
   const [city, setCity] = useState(null);
   const [dis, setDis] = useState(null);
-  const [Weather, SetWeather] = useState(null);
+
   let weatherImage = <ClearSkySvg />;
   const [search, setSearch] = useState('Ahmedabad');
   useEffect(() => {
