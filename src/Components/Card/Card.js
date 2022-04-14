@@ -30,16 +30,17 @@ const Card = (props) => {
 
   if (dis === 'few clouds') {
     console.log('few clouds');
+    return <OvercastClouds />;
   } else if (dis === 'scattered clouds') {
-    console.log('scattered clouds');
+    return <OvercastClouds />;
   } else if (dis === 'overcast clouds') {
-    console.log('overcast clouds');
+    return <OvercastClouds />;
   } else if (dis === 'haze') {
-    console.log('haze');
+    return <FogSvg />;
   } else if (dis === 'broken clouds') {
-    console.log('broken clouds');
+    return <OvercastClouds />;
   } else if (dis === 'clear sky') {
-    console.log('clear sky');
+    return <ClearSkySvg />;
   } else {
     console.log('none');
   }
